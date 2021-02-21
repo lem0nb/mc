@@ -42,26 +42,34 @@
                             <div class="misc-header text-center">
                                 <a href="#"><img alt="" src="https://cdn.jsdelivr.net/gh/minecraftcdn/file/img/logo_ahm.png" width="60%;" class="toggle-none hidden-xs"></a>
                             </div>
+                            <form name="RegForm" method="post" action="">
                             <div class="misc-box">
                                 <p class="text-center">注册一个账号</p>
                                     <div class="form-group">
                                         <label for="reg_name">用户名</label>
                                         <div class="group-icon">
-                                      <input id="reg_name" type="text" placeholder="请输入用户名(2-16个字符)" class="form-control" value="" required="">
+                                      <input id="username" name="username" type="text" placeholder="请输入用户名(2-16个字符)" class="form-control" value="" required="">
+                                      <span class="icon-user text-muted icon-input"></span>
+                                        </div>
+                                  </div>
+                                   <div class="form-group">
+                                        <label for="reg_name">邮箱(可选)</label>
+                                        <div class="group-icon">
+                                      <input id="email" name="email" type="text" placeholder="请输入您的邮箱" class="form-control" value="" required="">
                                       <span class="icon-user text-muted icon-input"></span>
                                         </div>
                                   </div>
                                   <div class="form-group group-icon">
                                         <label for="reg_pass">密码</label>
                                         <div class="group-icon">
-                                      <input id="reg_pass" type="password" placeholder="请输入密码(6-32个字符)" value="" class="form-control" required="">
+                                      <input id="password" name="password" type="password" placeholder="请输入密码(6-32个字符)" value="" class="form-control" required="">
                                       <span class="icon-lock text-muted icon-input"></span>
                                         </div>
                                   </div>
                                     <div class="form-group group-icon">
-                                        <label for="reg_repass">重复密码</label>
+                                        <label for="repass">重复密码</label>
                                         <div class="group-icon">
-                                      <input id="reg_repass" type="password" placeholder="请重复输入一次密码" value="" class="form-control" required="">
+                                      <input id="repass" name="repass" type="password" placeholder="请重复输入一次密码" value="" class="form-control" required="">
                                       <span class="icon-lock text-muted icon-input"></span>
                                         </div>
                                   </div>
@@ -73,15 +81,15 @@
                     </div>
                                       </div>
                                   </div>
-                                  <button id="TencentCaptcha" data-appid="2039519451" data-cbfn="callback" class="btn btn-block btn-primary btn-rounded box-shadow mt-10">立即注册</button>
+                                  <button type="submit" name="submit" class="btn btn-block btn-primary btn-rounded box-shadow mt-10">立即注册</button>
                                   <hr>
 
                                   <div class="text-center">
-                                      <a href="login.html">已有账号？前往登录</a>
+                                      <a href="login.php">已有账号？前往登录</a>
                                   </div>
                             </div>
                             <div class="text-center text-shadow">
-                                 <p>Copyright © 2019 AHM神秘大陆 All Rights Reserved.</p>
+                                 <p>Copyright © 2019-2021 AHM神秘大陆 All Rights Reserved.</p>
                             </div>
                         </div>
                     </div>
@@ -92,12 +100,12 @@
  //alert("注册暂时关闭"); 
 
                     
-   Swal.fire({
-                                type: 'error',
-                                title: '注册失败',
-                                html: "管理员已关闭注册功能",
-                            })
- //window.location.href="/login.html"; 
+ // Swal.fire({
+   //                             type: 'error',
+    //                            title: '注册失败',
+      //                          html: "管理员已关闭注册功能",
+        //                    })
+ //window.location.href="/login.php"; 
  </script> 
         <!-- Common Plugins -->
         <script src="https://cdn.jsdelivr.net/gh/minecraftcdn/file/assets/lib/jquery/dist/jquery.min.js"></script>
